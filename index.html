@@ -58,6 +58,11 @@
             margin-top: 10px;
             display: none; /* Boshlang'ichda yashirilgan */
         }
+        .reklama-blok {
+            margin: 20px auto;
+            width: 100%;
+            max-width: 300px;
+        }
     </style>
 </head>
 <body>
@@ -67,7 +72,7 @@
 
     <!-- Hamyon -->
     <div class="hamyon">
-        <strong>Coinlar:</strong> <span id="coinlar">1000</span>
+        <strong>Coinlar:</strong> <span id="coinlar">0</span>
     </div>
 
     <!-- Ayirboshlash Tugmalari -->
@@ -78,14 +83,29 @@
     <input type="text" id="id-input" placeholder="PUBG ID ni kiriting">
     <button id="id-tasdiqlash" onclick="ucTashlash()">UC Tashlash</button>
 
+    <!-- Google AdSense Reklama Bloki -->
+    <div class="reklama-blok">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+                crossorigin="anonymous"></script>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="XXXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
     <script>
         let reklamaTugmasi = document.getElementById("reklama-tugmasi");
         let xabar = document.getElementById("xabar");
         let coinlarElementi = document.getElementById("coinlar");
         let idInput = document.getElementById("id-input");
         let idTasdiqlash = document.getElementById("id-tasdiqlash");
-        let coinlar = 1000;
-        let tanlanganNarx = 1000;
+        let coinlar = 0;
+        let tanlanganNarx = 0;
 
         // Reklama ko'rish funksiyasi
         function reklamaKorish() {
